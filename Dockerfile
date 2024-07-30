@@ -15,7 +15,7 @@ RUN export RUSTUP_TOOLCHAIN=stable && \
 
 FROM alpine:latest
 
-RUN apk add --no-cache libc6-compat libgcc
+RUN apk add --no-cache libc6-compat libgcc libc-dev
 
 COPY --from=builder /app/target/release/jellyfin-rpc /usr/local/bin/jellyfin-rpc
 
